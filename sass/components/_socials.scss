@@ -1,0 +1,35 @@
+.socials {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.socials__svg {
+  width: 20px;
+  height: 20px;
+  fill: $icon-color;
+  transition: fill 250ms $timing-function;
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: $primary-white-color;
+  }
+}
